@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"sync"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/integration/mtest"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/integration/mtest"
 )
 
 // Helper functions for the operations in the unified spec test runner that require creating and synchronizing

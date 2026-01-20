@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/assert"
 )
 
 // newTestRegistry creates a new Registry.

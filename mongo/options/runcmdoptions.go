@@ -7,7 +7,7 @@
 package options
 
 import (
-	"go.mongodb.org/mongo-driver/v2/mongo/readpref"
+	"github.com/hanzoai/documentdb-go/mongo/readpref"
 )
 
 // RunCmdOptions represents arguments that can be used to configure a RunCommand

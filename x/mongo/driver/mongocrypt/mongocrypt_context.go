@@ -11,7 +11,7 @@ package mongocrypt
 // #include <mongocrypt.h>
 import "C"
 import (
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 // Context represents a mongocrypt_ctx_t handle

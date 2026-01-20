@@ -22,11 +22,11 @@ import (
 	"time"
 	"unsafe"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/httputil"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/auth/creds"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/mongocrypt/options"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/httputil"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/auth/creds"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/mongocrypt/options"
 )
 
 type kmsProvider interface {

@@ -17,12 +17,12 @@ import (
 	"context"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/csot"
-	"go.mongodb.org/mongo-driver/v2/mongo/address"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/description"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/mnet"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/session"
+	"github.com/hanzoai/documentdb-go/internal/csot"
+	"github.com/hanzoai/documentdb-go/mongo/address"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/description"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/mnet"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/session"
 )
 
 // AuthConfig holds the information necessary to perform an authentication attempt.

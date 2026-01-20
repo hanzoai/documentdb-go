@@ -9,8 +9,8 @@ package unified
 import (
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 // gridFSBucketOptions is a wrapper for *options.BucketOptionsBuilder. This type

@@ -14,8 +14,8 @@ import (
 	"net"
 	"net/http"
 
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/auth/internal/gssapi"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/auth/internal/gssapi"
 )
 
 // GSSAPI is the mechanism name for GSSAPI.

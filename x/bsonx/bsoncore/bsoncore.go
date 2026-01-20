@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/binaryutil"
+	"github.com/hanzoai/documentdb-go/internal/binaryutil"
 )
 
 const (

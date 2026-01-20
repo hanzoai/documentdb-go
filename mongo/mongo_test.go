@@ -12,13 +12,13 @@ import (
 	"reflect"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/assert/assertbson"
-	"go.mongodb.org/mongo-driver/v2/internal/codecutil"
-	"go.mongodb.org/mongo-driver/v2/internal/require"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/assert/assertbson"
+	"github.com/hanzoai/documentdb-go/internal/codecutil"
+	"github.com/hanzoai/documentdb-go/internal/require"
+	"github.com/hanzoai/documentdb-go/mongo/options"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 func TestEnsureID(t *testing.T) {

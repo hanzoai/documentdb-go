@@ -10,8 +10,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/description"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/description"
 )
 
 // Node represents a server session in a linked list

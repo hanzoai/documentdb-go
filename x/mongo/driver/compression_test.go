@@ -15,8 +15,8 @@ import (
 	"github.com/klauspost/compress/snappy"
 	"github.com/klauspost/compress/zstd"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/wiremessage"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/wiremessage"
 )
 
 func TestCompression(t *testing.T) {

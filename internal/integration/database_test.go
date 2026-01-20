@@ -14,15 +14,15 @@ import (
 	"reflect"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/failpoint"
-	"go.mongodb.org/mongo-driver/v2/internal/handshake"
-	"go.mongodb.org/mongo-driver/v2/internal/integration/mtest"
-	"go.mongodb.org/mongo-driver/v2/mongo"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
-	"go.mongodb.org/mongo-driver/v2/mongo/readpref"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/failpoint"
+	"github.com/hanzoai/documentdb-go/internal/handshake"
+	"github.com/hanzoai/documentdb-go/internal/integration/mtest"
+	"github.com/hanzoai/documentdb-go/mongo"
+	"github.com/hanzoai/documentdb-go/mongo/options"
+	"github.com/hanzoai/documentdb-go/mongo/readpref"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 const (

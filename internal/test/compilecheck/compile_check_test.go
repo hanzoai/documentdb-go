@@ -24,9 +24,9 @@ const mainGo = `package main
 import (
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/mongo"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/mongo"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 func main() {
@@ -156,7 +156,7 @@ func TestCompileCheck(t *testing.T) {
 
 	// Initialize Go module and download dependencies using the test suite Go version.
 	_ = execGo(t, container, &goExecConfig{version: testSuiteVersion}, "mod", "init", "compilecheck")
-	_ = execGo(t, container, nil, "mod", "edit", "-replace=go.mongodb.org/mongo-driver/v2=/mongo-go-driver")
+	_ = execGo(t, container, nil, "mod", "edit", "-replace=github.com/hanzoai/documentdb-go=/mongo-go-driver")
 	_ = execGo(t, container, &goExecConfig{version: testSuiteVersion}, "mod", "tidy")
 
 	// Set minimum Go version to what the driver claims (first version in our test list).

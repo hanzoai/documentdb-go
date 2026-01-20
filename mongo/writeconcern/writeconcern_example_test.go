@@ -7,9 +7,9 @@
 package writeconcern_test
 
 import (
-	"go.mongodb.org/mongo-driver/v2/mongo"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
-	"go.mongodb.org/mongo-driver/v2/mongo/writeconcern"
+	"github.com/hanzoai/documentdb-go/mongo"
+	"github.com/hanzoai/documentdb-go/mongo/options"
+	"github.com/hanzoai/documentdb-go/mongo/writeconcern"
 )
 
 // Configure a Client with write concern "majority" that requests

@@ -14,15 +14,15 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/driverutil"
-	"go.mongodb.org/mongo-driver/v2/internal/require"
-	"go.mongodb.org/mongo-driver/v2/internal/spectest"
-	"go.mongodb.org/mongo-driver/v2/mongo/address"
-	"go.mongodb.org/mongo-driver/v2/mongo/readpref"
-	"go.mongodb.org/mongo-driver/v2/tag"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/description"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/driverutil"
+	"github.com/hanzoai/documentdb-go/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/spectest"
+	"github.com/hanzoai/documentdb-go/mongo/address"
+	"github.com/hanzoai/documentdb-go/mongo/readpref"
+	"github.com/hanzoai/documentdb-go/tag"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/description"
 )
 
 type lastWriteDate struct {

@@ -10,8 +10,8 @@ import (
 	"context"
 	"io"
 
-	"go.mongodb.org/mongo-driver/v2/mongo/address"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/description"
+	"github.com/hanzoai/documentdb-go/mongo/address"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/description"
 )
 
 // ReadWriteCloser represents a Connection where server operations

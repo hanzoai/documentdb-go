@@ -16,9 +16,9 @@ import (
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"go.mongodb.org/mongo-driver/v2/event"
-	"go.mongodb.org/mongo-driver/v2/mongo"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/event"
+	"github.com/hanzoai/documentdb-go/mongo"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 const timeout = 60 * time.Second

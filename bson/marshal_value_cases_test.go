@@ -9,7 +9,7 @@ package bson
 import (
 	"io"
 
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 var marshalValueTestCases = []marshalValueTestCase{

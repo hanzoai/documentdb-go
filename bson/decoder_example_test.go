@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"io"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
+	"github.com/hanzoai/documentdb-go/bson"
 )
 
 func ExampleDecoder() {

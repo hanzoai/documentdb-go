@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/mongo/address"
-	"go.mongodb.org/mongo-driver/v2/tag"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/mongo/address"
+	"github.com/hanzoai/documentdb-go/tag"
 )
 
 // ServerKind represents the type of a single server in a topology.

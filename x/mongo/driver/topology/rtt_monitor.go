@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/mnet"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/operation"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/mnet"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/operation"
 )
 
 const (

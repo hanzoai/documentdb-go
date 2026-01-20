@@ -9,9 +9,9 @@ package unified
 import (
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/mongoutil"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/mongoutil"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 // transactionOptions is a wrapper for *options.transactionOptions. This type implements the bson.Unmarshaler interface

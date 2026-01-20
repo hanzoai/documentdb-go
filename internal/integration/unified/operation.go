@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/csot"
-	"go.mongodb.org/mongo-driver/v2/mongo"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/csot"
+	"github.com/hanzoai/documentdb-go/mongo"
 )
 
 type operation struct {

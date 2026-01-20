@@ -10,7 +10,7 @@ import (
 	"context"
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
+	"github.com/hanzoai/documentdb-go/bson"
 )
 
 // operationResult holds the result and/or error returned by an op.

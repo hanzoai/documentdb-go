@@ -56,8 +56,8 @@ func main() {
 			foundSummary = true
 		}
 
-		if strings.Contains(line, "go.mongodb.org/mongo-driver") {
-			line = strings.ReplaceAll(line, "go.mongodb.org/mongo-driver", ".")
+		if strings.Contains(line, "github.com/hanzoai/documentdb-go") {
+			line = strings.ReplaceAll(line, "github.com/hanzoai/documentdb-go", ".")
 			line = "##" + line
 		}
 		if !suppress {

@@ -13,9 +13,9 @@ import (
 	"path"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/require"
-	"go.mongodb.org/mongo-driver/v2/internal/spectest"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/spectest"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 type credential struct {

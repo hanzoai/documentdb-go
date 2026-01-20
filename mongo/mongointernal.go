@@ -11,9 +11,9 @@ package mongo
 import (
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/session"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/session"
 )
 
 // NewSessionWithLSID returns a Session with the given sessionID document. The

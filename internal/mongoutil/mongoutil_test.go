@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/ptrutil"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/ptrutil"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 func BenchmarkNewOptions(b *testing.B) {

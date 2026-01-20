@@ -10,11 +10,11 @@ import (
 	"context"
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/failpoint"
-	"go.mongodb.org/mongo-driver/v2/mongo"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/connstring"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/topology"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/failpoint"
+	"github.com/hanzoai/documentdb-go/mongo"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/connstring"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/topology"
 )
 
 // AuthEnabled returns whether or not the cluster requires auth.

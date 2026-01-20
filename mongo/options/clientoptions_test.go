@@ -23,16 +23,16 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/event"
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/httputil"
-	"go.mongodb.org/mongo-driver/v2/internal/optionsutil"
-	"go.mongodb.org/mongo-driver/v2/internal/ptrutil"
-	"go.mongodb.org/mongo-driver/v2/mongo/readconcern"
-	"go.mongodb.org/mongo-driver/v2/mongo/readpref"
-	"go.mongodb.org/mongo-driver/v2/mongo/writeconcern"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/connstring"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/event"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/httputil"
+	"github.com/hanzoai/documentdb-go/internal/optionsutil"
+	"github.com/hanzoai/documentdb-go/internal/ptrutil"
+	"github.com/hanzoai/documentdb-go/mongo/readconcern"
+	"github.com/hanzoai/documentdb-go/mongo/readpref"
+	"github.com/hanzoai/documentdb-go/mongo/writeconcern"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/connstring"
 )
 
 var tClientOptions = reflect.TypeOf(&ClientOptions{})

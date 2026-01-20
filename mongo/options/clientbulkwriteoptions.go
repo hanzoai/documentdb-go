@@ -7,8 +7,8 @@
 package options
 
 import (
-	"go.mongodb.org/mongo-driver/v2/internal/optionsutil"
-	"go.mongodb.org/mongo-driver/v2/mongo/writeconcern"
+	"github.com/hanzoai/documentdb-go/internal/optionsutil"
+	"github.com/hanzoai/documentdb-go/mongo/writeconcern"
 )
 
 // ClientBulkWriteOptions represents options that can be used to configure a client-level BulkWrite operation.

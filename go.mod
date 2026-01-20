@@ -1,4 +1,4 @@
-module go.mongodb.org/mongo-driver/v2
+module github.com/hanzoai/documentdb-go
 
 go 1.19
 

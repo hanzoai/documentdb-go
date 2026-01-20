@@ -19,10 +19,10 @@ import (
 	"sync"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/mnet"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/mnet"
 )
 
 // MongoDBOIDC is the string constant for the MONGODB-OIDC authentication mechanism.

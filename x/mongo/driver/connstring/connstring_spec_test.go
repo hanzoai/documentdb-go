@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/require"
-	"go.mongodb.org/mongo-driver/v2/internal/spectest"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/connstring"
+	"github.com/hanzoai/documentdb-go/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/spectest"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/connstring"
 )
 
 type host struct {

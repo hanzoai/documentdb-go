@@ -10,8 +10,8 @@ import (
 	"io"
 	"strconv"
 
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/wiremessage"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/wiremessage"
 )
 
 // Batches contains the necessary information to batch split an operation. This is only used for write

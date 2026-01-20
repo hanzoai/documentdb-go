@@ -12,8 +12,8 @@ import (
 	"math/big"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/require"
 )
 
 type bigIntTestCase struct {

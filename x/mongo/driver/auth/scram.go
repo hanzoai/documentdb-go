@@ -18,8 +18,8 @@ import (
 
 	"github.com/xdg-go/scram"
 	"github.com/xdg-go/stringprep"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
 )
 
 const (

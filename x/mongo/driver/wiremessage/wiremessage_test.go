@@ -10,9 +10,9 @@ import (
 	"math"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/binaryutil"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/binaryutil"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 func TestAppendHeaderStart(t *testing.T) {

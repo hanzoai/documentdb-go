@@ -1,8 +1,8 @@
 <p align="center"><img src="etc/assets/mongo-gopher.png" width="250"></p>
 <p align="center">
-  <a href="https://goreportcard.com/report/go.mongodb.org/mongo-driver/v2"><img src="https://goreportcard.com/badge/go.mongodb.org/mongo-driver/v2"></a>
-  <a href="https://pkg.go.dev/go.mongodb.org/mongo-driver/v2/mongo"><img src="etc/assets/godev-mongo-blue.svg" alt="docs"></a>
-  <a href="https://pkg.go.dev/go.mongodb.org/mongo-driver/v2/bson"><img src="etc/assets/godev-bson-blue.svg" alt="docs"></a>
+  <a href="https://goreportcard.com/report/github.com/hanzoai/documentdb-go"><img src="https://goreportcard.com/badge/github.com/hanzoai/documentdb-go"></a>
+  <a href="https://pkg.go.dev/github.com/hanzoai/documentdb-go/mongo"><img src="etc/assets/godev-mongo-blue.svg" alt="docs"></a>
+  <a href="https://pkg.go.dev/github.com/hanzoai/documentdb-go/bson"><img src="etc/assets/godev-bson-blue.svg" alt="docs"></a>
   <a href="https://www.mongodb.com/docs/drivers/go/current/"><img src="etc/assets/docs-mongodb-green.svg"></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/mongodb/mongo-go-driver">
     <img src="https://api.securityscorecards.dev/projects/github.com/mongodb/mongo-go-driver/badge" alt="OpenSSF Scorecard" />
@@ -29,17 +29,17 @@ The MongoDB Go driver follows [semantic versioning](https://semver.org/) for its
 ## Installation
 
 The recommended way to get started using the MongoDB Go driver is by using Go modules to install the dependency in
-your project. This can be done either by importing packages from `go.mongodb.org/mongo-driver` and having the build
+your project. This can be done either by importing packages from `github.com/hanzoai/documentdb-go` and having the build
 step install the dependency or by explicitly running
 
 ```bash
-go get go.mongodb.org/mongo-driver/v2/mongo
+go get github.com/hanzoai/documentdb-go/mongo
 ```
 
 When using a version of Go that does not support modules, the driver can be installed using `dep` by running
 
 ```bash
-dep ensure -add "go.mongodb.org/mongo-driver/v2/mongo"
+dep ensure -add "github.com/hanzoai/documentdb-go/mongo"
 ```
 
 ## Usage
@@ -51,9 +51,9 @@ import (
     "context"
     "time"
 
-    "go.mongodb.org/mongo-driver/v2/mongo"
-    "go.mongodb.org/mongo-driver/v2/mongo/options"
-    "go.mongodb.org/mongo-driver/v2/mongo/readpref"
+    "github.com/hanzoai/documentdb-go/mongo"
+    "github.com/hanzoai/documentdb-go/mongo/options"
+    "github.com/hanzoai/documentdb-go/mongo/readpref"
 )
 
 client, _ := mongo.Connect(options.Client().ApplyURI("mongodb://localhost:27017"))
@@ -69,7 +69,7 @@ defer func() {
 }()
 ```
 
-For more advanced configuration and authentication, see the [documentation for mongo.Connect](https://pkg.go.dev/go.mongodb.org/mongo-driver/v2/mongo#Connect).
+For more advanced configuration and authentication, see the [documentation for mongo.Connect](https://pkg.go.dev/github.com/hanzoai/documentdb-go/mongo#Connect).
 
 Calling `Connect` does not block for server discovery. If you wish to know if a MongoDB server has been found and connected to,
 use the `Ping` method:
@@ -97,7 +97,7 @@ res, _ := collection.InsertOne(ctx, bson.D{{"name", "pi"}, {"value", 3.14159}})
 id := res.InsertedID
 ```
 
-To use `bson.D`, you will need to add `"go.mongodb.org/mongo-driver/v2/bson"` to your imports.
+To use `bson.D`, you will need to add `"github.com/hanzoai/documentdb-go/bson"` to your imports.
 
 Your import statement should now look like this:
 
@@ -107,10 +107,10 @@ import (
     "log"
     "time"
 
-    "go.mongodb.org/mongo-driver/v2/bson"
-    "go.mongodb.org/mongo-driver/v2/mongo"
-    "go.mongodb.org/mongo-driver/v2/mongo/options"
-    "go.mongodb.org/mongo-driver/v2/mongo/readpref"
+    "github.com/hanzoai/documentdb-go/bson"
+    "github.com/hanzoai/documentdb-go/mongo"
+    "github.com/hanzoai/documentdb-go/mongo/options"
+    "github.com/hanzoai/documentdb-go/mongo/readpref"
 )
 ```
 
@@ -175,7 +175,7 @@ The Go Driver supports the following compression algorithms:
 
 #### Specify Compression Algorithms
 
-Compression can be enabled using the `compressors` parameter on the connection string or by using [`ClientOptions.SetCompressors`](https://pkg.go.dev/go.mongodb.org/mongo-driver/mongo/options#ClientOptions.SetCompressors):
+Compression can be enabled using the `compressors` parameter on the connection string or by using [`ClientOptions.SetCompressors`](https://pkg.go.dev/github.com/hanzoai/documentdb-go/mongo/options#ClientOptions.SetCompressors):
 
 ```go
 opts := options.Client().ApplyURI("mongodb://localhost:27017/?compressors=snappy,zlib,zstd")

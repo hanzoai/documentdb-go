@@ -10,7 +10,7 @@ import (
 	"bytes"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/assert"
 )
 
 type inputArgs struct {

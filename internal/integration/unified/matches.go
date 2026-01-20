@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"strings"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
+	"github.com/hanzoai/documentdb-go/bson"
 )
 
 // keyPathCtxKey is used as a key for a Context object. The value conveys the BSON key path that is currently being

@@ -9,8 +9,8 @@ package writeconcern_test
 import (
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/mongo/writeconcern"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/mongo/writeconcern"
 )
 
 func TestWriteConcern(t *testing.T) {

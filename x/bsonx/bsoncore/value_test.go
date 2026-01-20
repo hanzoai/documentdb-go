@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/assert"
 )
 
 func TestValue(t *testing.T) {

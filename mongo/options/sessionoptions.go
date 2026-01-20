@@ -6,7 +6,7 @@
 
 package options
 
-import "go.mongodb.org/mongo-driver/v2/bson"
+import "github.com/hanzoai/documentdb-go/bson"
 
 // DefaultCausalConsistency is the default value for the CausalConsistency option.
 var DefaultCausalConsistency = true

@@ -9,7 +9,7 @@ package options
 import (
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/optionsutil"
+	"github.com/hanzoai/documentdb-go/internal/optionsutil"
 )
 
 // FindOptions represents arguments that can be used to configure a Find

@@ -18,8 +18,8 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"go.mongodb.org/mongo-driver/v2/internal/bsoncoreutil"
-	"go.mongodb.org/mongo-driver/v2/internal/decimal128"
+	"github.com/hanzoai/documentdb-go/internal/bsoncoreutil"
+	"github.com/hanzoai/documentdb-go/internal/decimal128"
 )
 
 // ElementTypeError specifies that a method to obtain a BSON value an incorrect type was called on a bson.Value.

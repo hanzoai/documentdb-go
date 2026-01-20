@@ -12,7 +12,7 @@ import (
 	"testing/iotest"
 
 	"github.com/google/go-cmp/cmp"
-	"go.mongodb.org/mongo-driver/v2/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/require"
 )
 
 func jttDiff(t *testing.T, expected, actual jsonTokenType, desc string) {

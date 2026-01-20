@@ -17,8 +17,8 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"go.mongodb.org/mongo-driver/v2/internal/binaryutil"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/internal/binaryutil"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 // WireMessage represents a MongoDB wire message in binary form.

@@ -10,8 +10,8 @@ import (
 	"context"
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/v2/internal/integration/mtest"
-	"go.mongodb.org/mongo-driver/v2/internal/logger"
+	"github.com/hanzoai/documentdb-go/internal/integration/mtest"
+	"github.com/hanzoai/documentdb-go/internal/logger"
 )
 
 type testLogSink struct {

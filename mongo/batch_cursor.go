@@ -10,8 +10,8 @@ import (
 	"context"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
 )
 
 // batchCursor is the interface implemented by types that can provide batches of document results.

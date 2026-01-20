@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"io"
 
-	xrand "go.mongodb.org/mongo-driver/v2/internal/rand"
+	xrand "github.com/hanzoai/documentdb-go/internal/rand"
 )
 
 // NewLockedRand returns a new "x/exp/rand" pseudo-random number generator seeded with a

@@ -13,8 +13,8 @@ import (
 	"path"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/require"
-	"go.mongodb.org/mongo-driver/v2/internal/spectest"
+	"github.com/hanzoai/documentdb-go/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/spectest"
 )
 
 var bsonBinaryVectorDir = spectest.Path("bson-binary-vector")

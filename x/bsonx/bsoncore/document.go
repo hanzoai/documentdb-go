@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"strings"
 
-	"go.mongodb.org/mongo-driver/v2/internal/binaryutil"
+	"github.com/hanzoai/documentdb-go/internal/binaryutil"
 )
 
 // ValidationError is an error type returned when attempting to validate a document or array.

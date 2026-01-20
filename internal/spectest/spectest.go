@@ -13,7 +13,7 @@ import (
 	"runtime"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/require"
 )
 
 // FindJSONFilesInDir finds the JSON files in a directory.

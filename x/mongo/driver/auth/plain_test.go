@@ -12,13 +12,13 @@ import (
 	"strings"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/require"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/auth"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/description"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/drivertest"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/mnet"
+	"github.com/hanzoai/documentdb-go/internal/require"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/auth"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/description"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/drivertest"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/mnet"
 )
 
 func TestPlainAuthenticator_Fails(t *testing.T) {

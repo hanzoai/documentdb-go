@@ -13,16 +13,16 @@ import (
 	"fmt"
 	"strconv"
 
-	"go.mongodb.org/mongo-driver/v2/internal/mongoutil"
-	"go.mongodb.org/mongo-driver/v2/internal/optionsutil"
-	"go.mongodb.org/mongo-driver/v2/internal/serverselector"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
-	"go.mongodb.org/mongo-driver/v2/mongo/readpref"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/description"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/operation"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/session"
+	"github.com/hanzoai/documentdb-go/internal/mongoutil"
+	"github.com/hanzoai/documentdb-go/internal/optionsutil"
+	"github.com/hanzoai/documentdb-go/internal/serverselector"
+	"github.com/hanzoai/documentdb-go/mongo/options"
+	"github.com/hanzoai/documentdb-go/mongo/readpref"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/description"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/operation"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/session"
 )
 
 // ErrInvalidIndexValue is returned if an index is created with a keys document that has a value that is not a number

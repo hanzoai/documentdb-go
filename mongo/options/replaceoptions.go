@@ -6,7 +6,7 @@
 
 package options
 
-import "go.mongodb.org/mongo-driver/v2/internal/optionsutil"
+import "github.com/hanzoai/documentdb-go/internal/optionsutil"
 
 // ReplaceOptions represents arguments that can be used to configure a ReplaceOne
 // operation.

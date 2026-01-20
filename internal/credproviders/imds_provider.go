@@ -15,7 +15,7 @@ import (
 	"net/url"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/aws/credentials"
+	"github.com/hanzoai/documentdb-go/internal/aws/credentials"
 )
 
 const (

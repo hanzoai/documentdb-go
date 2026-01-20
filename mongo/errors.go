@@ -15,11 +15,11 @@ import (
 	"reflect"
 	"strings"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/codecutil"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/mongocrypt"
-	"go.mongodb.org/mongo-driver/v2/x/mongo/driver/topology"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/codecutil"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/mongocrypt"
+	"github.com/hanzoai/documentdb-go/x/mongo/driver/topology"
 )
 
 // ErrClientDisconnected is returned when disconnected Client is used to run an operation.

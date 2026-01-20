@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/assert"
 )
 
 func TestCondAddrCodec(t *testing.T) {

@@ -9,8 +9,8 @@ package assertbson
 import (
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 func TestEqualDocument(t *testing.T) {

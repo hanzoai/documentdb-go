@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/v2/internal/spectest"
+	"github.com/hanzoai/documentdb-go/internal/spectest"
 )
 
 var (

@@ -17,10 +17,10 @@ import (
 	"strings"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/aws/credentials"
-	v4signer "go.mongodb.org/mongo-driver/v2/internal/aws/signer/v4"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/aws/credentials"
+	v4signer "github.com/hanzoai/documentdb-go/internal/aws/signer/v4"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 type clientState int

@@ -11,9 +11,9 @@ import (
 	"net/http"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/aws/credentials"
-	"go.mongodb.org/mongo-driver/v2/internal/credproviders"
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/internal/aws/credentials"
+	"github.com/hanzoai/documentdb-go/internal/credproviders"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 const (

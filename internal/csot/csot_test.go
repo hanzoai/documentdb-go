@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
-	"go.mongodb.org/mongo-driver/v2/internal/ptrutil"
+	"github.com/hanzoai/documentdb-go/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/ptrutil"
 )
 
 func newTestContext(t *testing.T, timeout time.Duration) context.Context {

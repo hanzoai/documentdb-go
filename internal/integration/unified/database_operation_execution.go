@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/internal/bsonutil"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/bson"
+	"github.com/hanzoai/documentdb-go/internal/bsonutil"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 // This file contains helpers to execute database operations.

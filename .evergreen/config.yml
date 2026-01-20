@@ -30,27 +30,27 @@ functions:
     - command: git.get_project
       type: system
       params:
-        directory: src/go.mongodb.org/mongo-driver
+        directory: src/github.com/hanzoai/documentdb-go
     - command: shell.exec
       params:
-        working_dir: "src/go.mongodb.org/mongo-driver"
+        working_dir: "src/github.com/hanzoai/documentdb-go"
         script: |
           git submodule update --init
     # Make an env.sh and evergreen expansion file with dynamic values
     - command: subprocess.exec
       params:
         binary: bash
-        working_dir: src/go.mongodb.org/mongo-driver
+        working_dir: src/github.com/hanzoai/documentdb-go
         env:
           GOROOT: ${GO_DIST}
           IS_PATCH: ${is_patch}
           VERSION_ID: ${version_id}
           # Define an alias for the task runner script.
-          TASK_RUNNER_ALIAS: &task-runner src/go.mongodb.org/mongo-driver/.evergreen/run-task.sh
+          TASK_RUNNER_ALIAS: &task-runner src/github.com/hanzoai/documentdb-go/.evergreen/run-task.sh
         args: [.evergreen/setup-system.sh]
     - command: expansions.update
       params:
-        file: src/go.mongodb.org/mongo-driver/expansion.yml
+        file: src/github.com/hanzoai/documentdb-go/expansion.yml
     - command: subprocess.exec
       params:
         binary: bash
@@ -62,7 +62,7 @@ functions:
       params:
         optional_output: "true"
         files:
-          - "src/go.mongodb.org/mongo-driver/*.suite"
+          - "src/github.com/hanzoai/documentdb-go/*.suite"
     - command: ec2.assume_role
       params:
         role_arn: ${assume_role_arn}
@@ -98,7 +98,7 @@ functions:
         aws_key: ${AWS_ACCESS_KEY_ID}
         aws_secret: ${AWS_SECRET_ACCESS_KEY}
         aws_session_token: ${AWS_SESSION_TOKEN}
-        local_file: src/go.mongodb.org/mongo-driver/test_suite.tgz
+        local_file: src/github.com/hanzoai/documentdb-go/test_suite.tgz
         optional: true
         remote_file: ${build_variant}/${revision}/${version_id}/${build_id}/logs/${task_id}-${execution}-test_suite.tgz
         bucket: ${aws_bucket}
@@ -230,7 +230,7 @@ functions:
             "https://performance-monitoring-api.corp.mongodb.com/raw_perf_results/cedar_report?project=${project_id}&version=${version_id}&variant=${build_variant}&order=$parsed_order_id&task_name=${task_name}&task_id=${task_id}&execution=${execution}&mainline=$is_mainline" \
             -H 'accept: application/json' \
             -H 'Content-Type: application/json' \
-            -d @src/go.mongodb.org/mongo-driver/perf.json)
+            -d @src/github.com/hanzoai/documentdb-go/perf.json)
 
           http_status=$(echo "$response" | grep "HTTP_STATUS" | awk -F':' '{print $2}')
           response_body=$(echo "$response" | sed '/HTTP_STATUS/d')
@@ -492,7 +492,7 @@ functions:
         role_arn: ${aws_test_secrets_role}
     - command: subprocess.exec
       params:
-        working_dir: src/go.mongodb.org/mongo-driver
+        working_dir: src/github.com/hanzoai/documentdb-go
         binary: bash
         background: true
         include_expansions_in_env: ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_SESSION_TOKEN", "DRIVERS_TOOLS"]
@@ -1883,7 +1883,7 @@ task_groups:
       - func: assume-test-secrets-ec2-role
       - command: subprocess.exec
         params:
-          working_dir: src/go.mongodb.org/mongo-driver
+          working_dir: src/github.com/hanzoai/documentdb-go
           binary: bash
           include_expansions_in_env: [AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN]
           env:
@@ -1894,7 +1894,7 @@ task_groups:
     teardown_group:
       - command: subprocess.exec
         params:
-          working_dir: src/go.mongodb.org/mongo-driver
+          working_dir: src/github.com/hanzoai/documentdb-go
           binary: bash
           add_expansions_to_env: true
           env:
@@ -1914,7 +1914,7 @@ task_groups:
       - func: assume-test-secrets-ec2-role
       - command: subprocess.exec
         params:
-          working_dir: src/go.mongodb.org/mongo-driver
+          working_dir: src/github.com/hanzoai/documentdb-go
           binary: bash
           include_expansions_in_env: [AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN, MONGODB_URI]
           env:
@@ -1924,20 +1924,20 @@ task_groups:
             - ${DRIVERS_TOOLS}/.evergreen/atlas/setup.sh
       - command: expansions.update
         params:
-          file: src/go.mongodb.org/mongo-driver/atlas-expansion.yml
+          file: src/github.com/hanzoai/documentdb-go/atlas-expansion.yml
       - command: shell.exec
         params:
-          working_dir: src/go.mongodb.org/mongo-driver
+          working_dir: src/github.com/hanzoai/documentdb-go
           shell: bash
           script: |-
             echo "SEARCH_INDEX_URI: ${MONGODB_URI}" > atlas-expansion.yml
       - command: expansions.update
         params:
-          file: src/go.mongodb.org/mongo-driver/atlas-expansion.yml
+          file: src/github.com/hanzoai/documentdb-go/atlas-expansion.yml
     teardown_group:
       - command: subprocess.exec
         params:
-          working_dir: src/go.mongodb.org/mongo-driver
+          working_dir: src/github.com/hanzoai/documentdb-go
           binary: bash
           args:
             - ${DRIVERS_TOOLS}/.evergreen/atlas/teardown.sh

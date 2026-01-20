@@ -9,7 +9,7 @@ package options
 import (
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/bson"
+	"github.com/hanzoai/documentdb-go/bson"
 )
 
 // ChangeStreamOptions represents arguments that can be used to configure a Watch operation.

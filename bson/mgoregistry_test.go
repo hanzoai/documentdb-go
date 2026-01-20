@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/v2/internal/assert"
+	"github.com/hanzoai/documentdb-go/internal/assert"
 )
 
 // Wrap up the document elements contained in data, prepending the int32

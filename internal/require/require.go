@@ -9,7 +9,7 @@ package require
 import (
 	time "time"
 
-	assert "go.mongodb.org/mongo-driver/v2/internal/assert"
+	assert "github.com/hanzoai/documentdb-go/internal/assert"
 )
 
 // TestingT is an interface wrapper around *testing.T

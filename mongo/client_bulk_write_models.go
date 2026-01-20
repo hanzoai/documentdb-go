@@ -7,7 +7,7 @@
 package mongo
 
 import (
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+	"github.com/hanzoai/documentdb-go/mongo/options"
 )
 
 // ClientWriteModel is an interface implemented by models that can be used in a client-level BulkWrite operation. Each

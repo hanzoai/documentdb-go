@@ -7,7 +7,7 @@
 package bson
 
 import (
-	"go.mongodb.org/mongo-driver/v2/x/bsonx/bsoncore"
+	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
 
 // RawElement is a raw encoded BSON document or array element.
