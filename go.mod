@@ -1,6 +1,6 @@
 module github.com/hanzoai/documentdb-go
 
-go 1.19
+go 1.24.0
 
 require (
 	github.com/davecgh/go-spew v1.1.1
@@ -9,13 +9,13 @@ require (
 	github.com/xdg-go/scram v1.2.0
 	github.com/xdg-go/stringprep v1.0.4
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78
-	golang.org/x/crypto v0.33.0
-	golang.org/x/sync v0.11.0
+	golang.org/x/crypto v0.48.0
+	golang.org/x/sync v0.19.0
 )
 
 require (
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
-	golang.org/x/text v0.22.0 // indirect
+	golang.org/x/text v0.34.0 // indirect
 )
 
 replace golang.org/x/net/http2 => golang.org/x/net/http2 v0.23.0 // GODRIVER-3225
