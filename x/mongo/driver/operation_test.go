@@ -19,7 +19,7 @@ import (
 	"github.com/hanzoai/documentdb-go/internal/assert"
 	"github.com/hanzoai/documentdb-go/internal/csot"
 	"github.com/hanzoai/documentdb-go/internal/handshake"
-	"github.com/hanzoai/documentdb-go/internal/require"
+	"github.com/hanzoai/documentdb-go/internal/serverselector"
 	"github.com/hanzoai/documentdb-go/internal/uuid"
 	"github.com/hanzoai/documentdb-go/mongo/address"
 	"github.com/hanzoai/documentdb-go/mongo/readconcern"
@@ -80,12 +80,9 @@ func TestOperation(t *testing.T) {
 			_, err := op.selectServer(context.Background(), 1, nil)
 			noerr(t, err)
 
-			// Assert the selector is an operation selector wrapper.
-			oss, ok := d.params.selector.(*opServerSelector)
-			require.True(t, ok)
-
-			if !cmp.Equal(oss.selector, want) {
-				t.Errorf("Did not get expected server selector. got %v; want %v", oss.selector, want)
+			// Selector is always wrapped with Deprioritized, even when deprioritized is nil.
+			if _, ok := d.params.selector.(*serverselector.Deprioritized); !ok {
+				t.Errorf("Expected Deprioritized wrapper around server selector, got %T", d.params.selector)
 			}
 		})
 		t.Run("uses a default server selector", func(t *testing.T) {
@@ -881,126 +878,6 @@ func TestDecodeOpReply(t *testing.T) {
 		reply := Operation{}.decodeOpReply(wm)
 		assert.Equal(t, []bsoncore.Document(nil), reply.documents)
 	})
-}
-
-func TestFilterDeprioritizedServers(t *testing.T) {
-	t.Parallel()
-
-	tests := []struct {
-		name          string
-		deprioritized []description.Server
-		candidates    []description.Server
-		want          []description.Server
-	}{
-		{
-			name:       "empty",
-			candidates: []description.Server{},
-			want:       []description.Server{},
-		},
-		{
-			name:       "nil candidates",
-			candidates: nil,
-			want:       []description.Server{},
-		},
-		{
-			name: "nil deprioritized server list",
-			candidates: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-			},
-			want: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-			},
-		},
-		{
-			name: "deprioritize single server candidate list",
-			candidates: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-			},
-			deprioritized: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-			},
-			want: []description.Server{
-				// Since all available servers were deprioritized, then the selector
-				// should return all candidates.
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-			},
-		},
-		{
-			name: "depriotirize one server in multi server candidate list",
-			candidates: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-				{
-					Addr: address.Address("mongodb://localhost:27018"),
-				},
-				{
-					Addr: address.Address("mongodb://localhost:27019"),
-				},
-			},
-			deprioritized: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-			},
-			want: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27018"),
-				},
-				{
-					Addr: address.Address("mongodb://localhost:27019"),
-				},
-			},
-		},
-		{
-			name: "depriotirize multiple servers in multi server candidate list",
-			deprioritized: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-				{
-					Addr: address.Address("mongodb://localhost:27018"),
-				},
-			},
-			candidates: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27017"),
-				},
-				{
-					Addr: address.Address("mongodb://localhost:27018"),
-				},
-				{
-					Addr: address.Address("mongodb://localhost:27019"),
-				},
-			},
-			want: []description.Server{
-				{
-					Addr: address.Address("mongodb://localhost:27019"),
-				},
-			},
-		},
-	}
-
-	for _, tc := range tests {
-		tc := tc // Capture the range variable.
-
-		t.Run(tc.name, func(t *testing.T) {
-			t.Parallel()
-
-			got := filterDeprioritizedServers(tc.candidates, tc.deprioritized)
-			assert.ElementsMatch(t, got, tc.want)
-		})
-	}
 }
 
 func TestMarshalBSONWriteConcern(t *testing.T) {

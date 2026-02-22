@@ -7,12 +7,10 @@
 package mongo
 
 import (
-	"errors"
-
 	"context"
-	"time"
-
+	"errors"
 	"math"
+	"time"
 
 	"github.com/hanzoai/documentdb-go/bson"
 )

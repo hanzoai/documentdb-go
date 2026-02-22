@@ -21,9 +21,7 @@ import (
 	"github.com/hanzoai/documentdb-go/mongo/writeconcern"
 )
 
-var (
-	gridfsConnsCheckedOut int
-)
+var gridfsConnsCheckedOut int
 
 func TestGridFS(t *testing.T) {
 	if testing.Short() {

@@ -10,6 +10,7 @@ package mongocrypt
 
 // #include <mongocrypt.h>
 import "C"
+
 import (
 	"github.com/hanzoai/documentdb-go/x/bsonx/bsoncore"
 )
