@@ -1,6 +1,6 @@
 module github.com/hanzoai/documentdb-go
 
-go 1.19
+go 1.26
 
 require (
 	github.com/davecgh/go-spew v1.1.1
